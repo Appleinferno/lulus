@@ -1,375 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LuLu's Live Music & Events | Andrews, NC — Live Music Every Saturday</title>
-  <meta name="description" content="LuLu's Live Music & Events in Andrews, NC — a family-friendly venue with live country, bluegrass & country rock music every Saturday night. Dance floor open for all ages!">
-  <meta name="keywords" content="live music Andrews NC, dance floor Cherokee County, country music venue, bluegrass, LuLu's Live Music">
+  <title>LuLu's Live Music &amp; Events | Live Music Every Saturday in Andrews, NC</title>
+  <meta name="description"
+    content="Family-friendly live music and dance venue in Cherokee County, NC. Live music every Saturday night 7PM-10PM featuring country, bluegrass &amp; country rock. Open dance floor for all ages.">
   <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/avif" href="LuLu's live music and events logo.avif">
 </head>
+
 <body>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="#hero" class="header-logo">
-        <img src="LuLu's live music and events logo.avif" alt="LuLu's Live Music & Events logo" width="160" height="55">
+  <!-- ══════════════════════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="LuLu's live music and events logo.avif" alt="LuLu's Live Music and Events logo">
+        <span class="navbar__logo-text">LuLu's Live Music &amp; Events</span>
       </a>
 
-      <nav class="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#live-music">Live Music</a>
-        <a href="#dance-floor">Dance Floor</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#visit">Visit Us</a>
-      </nav>
+      <div class="navbar__links" id="nav-links">
+        <a href="about/">About</a>
+        <a href="dance-nights/">Dance Nights</a>
+        <a href="venue-rental-andrews-nc/">Venue Rental</a>
+        <a href="contact/">Contact</a>
+      </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <a href="contact/" class="btn btn--primary navbar__cta">Contact Us</a>
+
+      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-  </header>
-
-  <!-- Mobile nav overlay -->
-  <nav class="mobile-nav" id="mobile-nav">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#live-music" class="mobile-link">Live Music</a>
-    <a href="#dance-floor" class="mobile-link">Dance Floor</a>
-    <a href="#gallery" class="mobile-link">Gallery</a>
-    <a href="#visit" class="mobile-link">Visit Us</a>
   </nav>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="about/" class="mobile-link">About</a>
+    <a href="dance-nights/" class="mobile-link">Dance Nights</a>
+    <a href="venue-rental-andrews-nc/" class="mobile-link">Venue Rental</a>
+    <a href="contact/" class="mobile-link">Contact</a>
+    <a href="contact/" class="btn btn--primary">Contact Us</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO SECTION
+       ══════════════════════════════════════════════════════════ -->
   <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="LuLu's Live Music & Events with Band Photo.avif" alt="LuLu's Live Music & Events venue with the live band performing on stage">
-    </div>
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-      <img src="LuLu's live music and events logo.avif" alt="LuLu's Live Music & Events" class="hero-logo">
-      <p class="hero-tagline">Cherokee County, North Carolina</p>
-      <h1 class="hero-headline">Where The <span class="highlight">Music Plays</span> &amp; The <span class="highlight">Dance Floor</span> Comes Alive</h1>
-      <p class="hero-desc">Family-friendly live music every Saturday night — country, bluegrass, and country rock for all ages.</p>
-      <div class="hero-actions">
-        <a href="#live-music" class="btn btn-primary">🎵 See the Schedule</a>
-        <a href="#visit" class="btn btn-outline">📍 Get Directions</a>
+    <div class="hero__inner container">
+      <!-- Left: Headline -->
+      <div class="hero__content">
+        <div class="hero__badge">
+          Live Every Saturday
+        </div>
+        <h1 class="hero__title">
+          <span>LuLu's</span>
+          <span class="text-gradient">Live Music</span>
+          <span>&amp; Events</span>
+        </h1>
+        <p class="hero__subtitle">
+          Family-friendly live music and open dance floor every Saturday night in the heart of Cherokee County, North
+          Carolina.
+        </p>
+        <div class="hero__actions">
+          <a href="dance-nights/" class="btn btn--gold">Saturday Nights</a>
+          <a href="contact/" class="btn btn--secondary">Contact Us</a>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-scroll-indicator" aria-hidden="true">
-      <span></span>
+      <!-- Right: Calendar -->
+      <div class="calendar-wrapper animate-fade-up animate-delay-2" id="calendar"></div>
     </div>
   </section>
 
-  <!-- ==================== ABOUT ==================== -->
-  <section class="about section" id="about">
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT
+       ══════════════════════════════════════════════════════════ -->
+  <section class="section section--surface" id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal-left">
-          <span class="section-label">Welcome to LuLu's</span>
-          <h2 class="section-title">Your Home for <span class="text-gold">Live Music</span> in the Mountains</h2>
-          <p>Nestled in the heart of Cherokee County, LuLu's Live Music & Events is the go-to spot for unforgettable Saturday nights in Andrews, North Carolina. Whether you're a seasoned dancer or just love soaking in the sounds of live music, there's a place for you here.</p>
-          <p>We offer a family-friendly venue for all ages. The band is always mixing it up — from toe-tapping country to high-energy bluegrass and country rock — so if you're a dancer, LuLu's is the place for you.</p>
+      <div class="about-content">
+        <div class="about-text">
+          <span class="section-label">About Us</span>
+          <h2>Where the Music <span class="text-gradient">Comes Alive</span></h2>
+          <p>
+            Nestled along Business 19 Highway in Andrews, North Carolina, LuLu's Live Music &amp; Events is Cherokee
+            County's home for live music and dancing. Owned by <strong style="color: var(--clr-text);">Lois
+              Baker</strong>, LuLu's has become the heartbeat of the local music scene.
+          </p>
+          <p>
+            We offer a family-friendly venue for all ages — from kids tapping their toes to grandparents cutting a rug
+            on the dance floor. Every Saturday night, the stage lights up with the best in country, bluegrass, and
+            country rock.
+          </p>
+          <p>
+            The venue is also available for <strong style="color: var(--clr-primary-light);">private event
+              rentals</strong> — birthdays, reunions, corporate gatherings, and more. Contact us for availability and
+            pricing.
+          </p>
 
-          <div class="about-features">
-            <div class="feature-card">
-              <div class="feature-icon">👨‍👩‍👧‍👦</div>
-              <h4>All Ages Welcome</h4>
-              <p>Family-friendly fun</p>
+          <div class="about-facts">
+            <div class="about-fact">
+              <span class="about-fact__number">52+</span>
+              <span class="about-fact__label">Live Shows / Year</span>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">🎸</div>
-              <h4>Live Every Saturday</h4>
-              <p>7 PM – 10:30 PM</p>
+            <div class="about-fact">
+              <span class="about-fact__number">All Ages</span>
+              <span class="about-fact__label">Family Friendly</span>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">💃</div>
-              <h4>Dance Floor</h4>
-              <p>Room to move</p>
+            <div class="about-fact">
+              <span class="about-fact__number">7-10 PM</span>
+              <span class="about-fact__label">Every Saturday</span>
             </div>
-            <div class="feature-card">
-              <div class="feature-icon">🎶</div>
-              <h4>Mixed Genres</h4>
-              <p>Country, bluegrass & more</p>
+            <div class="about-fact">
+              <span class="about-fact__number">Rentals</span>
+              <span class="about-fact__label">Available</span>
             </div>
           </div>
         </div>
 
-        <div class="about-image reveal-right">
-          <img src="LuLu's Live Music & Events Exterior photo of the front of the music venue with an image of the band inside it.avif" alt="LuLu's Live Music & Events — exterior view of the venue" style="border-radius: var(--border-radius); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+        <div class="about-image">
+          <img
+            src="LuLu's Live Music & Events Exterior photo of the front of the music venue with an image of the band inside it.avif"
+            alt="Exterior view of LuLu's Live Music and Events venue in Andrews, NC" class="venue-img" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== LIVE MUSIC ==================== -->
-  <section class="live-music section" id="live-music">
+  <!-- ══════════════════════════════════════════════════════════
+       LIVE MUSIC – FEATURED SATURDAY
+       ══════════════════════════════════════════════════════════ -->
+  <section class="section" id="live-music">
     <div class="container">
-      <div class="music-grid">
-        <div class="music-image reveal-left">
-          <img src="Betty-Vaughn-and-the-band-photograph-they-play-the-live-music-every-saturday.avif" alt="Betty Vaughn and the band performing live every Saturday at LuLu's" style="border-radius: var(--border-radius); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+      <div class="section-header">
+        <span class="section-label">Every Saturday Night</span>
+        <h2>Live Music at LuLu's</h2>
+        <p>The band is always mixing it up — if you're a dancer, LuLu's is the place for you.</p>
+      </div>
+
+      <!-- Featured Event Card -->
+      <div class="featured-event animate-fade-up">
+        <span class="featured-event__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg>
+          Weekly Event
+        </span>
+        <h2>Saturday Night <span class="text-gradient">Live Music</span></h2>
+        <div class="event-time">7:00 PM — 10:00 PM</div>
+        <p>Join us every Saturday evening for an unforgettable night of live music and dancing. Our talented bands bring
+          the best of country, bluegrass, and country rock to the LuLu's stage.</p>
+        <div class="genre-tags" style="justify-content: center; margin-bottom: var(--sp-xl);">
+          <span class="genre-tag genre-tag--country">Country</span>
+          <span class="genre-tag genre-tag--bluegrass">Bluegrass</span>
+          <span class="genre-tag genre-tag--rock">Country Rock</span>
         </div>
+        <a href="contact/" class="btn btn--gold">Reserve Your Spot</a>
+      </div>
 
-        <div class="music-info reveal-right">
-          <span class="section-label">Every Saturday Night</span>
-          <h2 class="section-title">Live Music <span class="text-gold">on Stage</span></h2>
-          <p style="color: var(--color-cream-muted); margin-bottom: var(--space-md);">Every Saturday evening, our stage comes alive with the best of country, bluegrass, and country rock. Our bands always keep it fresh, mixing fan favorites with new tunes that'll have you on your feet all night long.</p>
-
-          <div class="music-schedule">
-            <div class="schedule-header">
-              <span class="schedule-day">Every Saturday</span>
-              <span class="schedule-time">7:00 PM — 10:30 PM</span>
-            </div>
-            <p style="color: var(--color-cream-muted); font-size: 0.95rem;">Live performances by local and regional bands. The setlist always changes — you never know what you're going to get!</p>
-
-            <div class="genre-tags">
-              <span class="genre-tag">🤠 Country</span>
-              <span class="genre-tag">🪕 Bluegrass</span>
-              <span class="genre-tag">🎸 Country Rock</span>
-              <span class="genre-tag">🎵 Mixed Sets</span>
-            </div>
+      <!-- Music info cards -->
+      <div class="grid-3" style="margin-top: var(--sp-3xl);">
+        <div class="card animate-fade-up animate-delay-1">
+          <div class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
           </div>
+          <h3>Live Bands</h3>
+          <p>Different bands every week keep the music fresh. Country, bluegrass, and country rock — there's always
+            something new.</p>
         </div>
+
+        <div class="card animate-fade-up animate-delay-2">
+          <div class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+          </div>
+          <h3>Every Saturday</h3>
+          <p>Doors open at 7 PM, music plays until 10 PM. Come early for a great seat or dance all night on the open
+            floor.</p>
+        </div>
+
+        <div class="card animate-fade-up animate-delay-3">
+          <div class="card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>All Ages Welcome</h3>
+          <p>LuLu's is a family-friendly venue. Bring the whole family for a fun Saturday night out in Andrews.</p>
+        </div>
+      </div>
+
+      <!-- Band Image -->
+      <div style="margin-top: var(--sp-3xl);">
+        <img src="Betty-Vaughn-and-the-band-photograph-they-play-the-live-music-every-saturday.avif"
+          alt="Betty Vaughn and the band performing live every Saturday at LuLu's" class="venue-img" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- ==================== DANCE FLOOR ==================== -->
-  <section class="dance-floor section" id="dance-floor">
+  <!-- ══════════════════════════════════════════════════════════
+       DANCE FLOOR
+       ══════════════════════════════════════════════════════════ -->
+  <section class="section section--surface-alt" id="dance-floor">
     <div class="container">
-      <div class="dance-grid">
-        <div class="dance-text reveal-left">
-          <span class="section-label">Hit the Floor</span>
-          <h2 class="section-title">The <span class="text-gold">Dance Floor</span> Is Calling</h2>
-          <p>Whether you're into two-stepping, line dancing, or freestyle, our spacious dance floor has room for everyone. The band keeps the energy high and the rhythm going — so grab a partner or go solo, and let the music move you.</p>
-          <p>If you are a dancer, LuLu's is the place for you. We're proud to be the premier dance and music venue in Cherokee County.</p>
+      <div class="dance-content">
+        <div>
+          <span class="section-label">Get Moving</span>
+          <h2>The <span class="text-gradient">Dance Floor</span> Is Calling</h2>
+          <p style="margin-bottom: var(--sp-xl); color: var(--clr-text-muted);">If you love to dance, LuLu's is your
+            spot. Our spacious open dance floor is the heart of every Saturday night, where friends, families, and
+            strangers become dance partners.</p>
 
-          <div class="dance-highlight">
-            <div class="dance-highlight-icon">🕺</div>
-            <div>
-              <h4 style="margin-bottom: 0.25rem;">No Experience Needed</h4>
-              <p>All skill levels welcome — come as you are and let the music guide you!</p>
+          <div class="dance-features">
+            <div class="dance-feature">
+              <div class="dance-feature__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                </svg>
+              </div>
+              <div>
+                <h4>Spacious Open Floor</h4>
+                <p>Plenty of room for line dancing, two-stepping, or freestyling — no matter the crowd.</p>
+              </div>
+            </div>
+
+            <div class="dance-feature">
+              <div class="dance-feature__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <h4>All Skill Levels</h4>
+                <p>Whether you're a seasoned dancer or just getting started, everyone's welcome on LuLu's dance floor.
+                </p>
+              </div>
+            </div>
+
+            <div class="dance-feature">
+              <div class="dance-feature__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h4>Live Band Energy</h4>
+                <p>Nothing compares to dancing to a live band — the energy is electric every Saturday night.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="dance-image reveal-right">
-          <img src="dancing on the dance floor.avif" alt="Guests dancing on the dance floor at LuLu's Live Music & Events" style="border-radius: var(--border-radius); width: 100%; aspect-ratio: 4/3; object-fit: cover;">
+        <div>
+          <img src="dancing on the dance floor.avif"
+            alt="Dancers enjoying the open dance floor at LuLu's Live Music and Events" class="venue-img" loading="lazy"
+            style="margin-bottom: var(--sp-lg);">
+          <!-- Placeholder for additional dance floor photo -->
+          <div class="img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Dance Floor Photo Coming Soon</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== GALLERY ==================== -->
-  <section class="gallery section" id="gallery">
+  <!-- ══════════════════════════════════════════════════════════
+       GALLERY
+       ══════════════════════════════════════════════════════════ -->
+  <section class="section section--surface" id="gallery">
     <div class="container">
-      <div style="text-align: center; margin-bottom: var(--space-xl);" class="reveal">
-        <span class="section-label">Captured Moments</span>
-        <h2 class="section-title section-title-center">Gallery</h2>
-        <p style="color: var(--color-cream-muted); max-width: 550px; margin: 0 auto;">A look inside the magic — live performances, dancing, and good times at LuLu's.</p>
+      <div class="section-header">
+        <span class="section-label">Photos</span>
+        <h2>Gallery</h2>
+        <p>Glimpses from the stage, the dance floor, and the good times at LuLu's.</p>
       </div>
 
-      <div class="gallery-grid reveal">
-        <!-- Large featured image -->
-        <div class="gallery-item">
-          <img src="Lulus live music and events 01.avif" alt="LuLu's Live Music & Events — venue atmosphere">
+      <div class="gallery-grid">
+        <!-- Row 1: Large hero image -->
+        <div class="gallery-item gallery-item--large">
+          <img src="LuLu's Hero Image draft (1).avif" alt="LuLu's Live Music and Events hero scene" loading="lazy">
+          <div class="gallery-item__overlay"><span>Live Music Night</span></div>
         </div>
 
-        <!-- Existing AVIF -->
-        <div class="gallery-item">
-          <img src="dancing on the dance floor.avif" alt="Dancing on the dance floor at LuLu's">
+        <!-- Row 2: Mixed real + placeholder -->
+        <div class="gallery-item gallery-item--standard">
+          <img src="Lulus live music and events 01.avif" alt="LuLu's Live Music and Events venue interior"
+            loading="lazy">
+          <div class="gallery-item__overlay"><span>The Venue</span></div>
         </div>
 
-        <!-- Placeholder 1 -->
-        <div class="gallery-item">
-          <div class="img-placeholder">
-            <span class="placeholder-icon">📸</span>
-            <span class="placeholder-label">Band Close-up Photo</span>
+        <div class="gallery-item gallery-item--standard">
+          <img src="LuLu's Live Music & Events with Band Photo.avif"
+            alt="LuLu's Live Music and Events with band performing" loading="lazy">
+          <div class="gallery-item__overlay"><span>Band on Stage</span></div>
+        </div>
+
+        <!-- Placeholder slots -->
+        <div class="gallery-item gallery-item--standard">
+          <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: 0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Photo Coming Soon</span>
           </div>
         </div>
 
-        <!-- Placeholder 2 -->
-        <div class="gallery-item">
-          <div class="img-placeholder">
-            <span class="placeholder-icon">🎤</span>
-            <span class="placeholder-label">Singer on Stage</span>
+        <div class="gallery-item gallery-item--standard">
+          <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: 0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Photo Coming Soon</span>
           </div>
         </div>
 
-        <!-- Placeholder 3 -->
-        <div class="gallery-item">
-          <div class="img-placeholder">
-            <span class="placeholder-icon">🎉</span>
-            <span class="placeholder-label">Crowd Enjoying the Show</span>
+        <!-- Placeholder wide -->
+        <div class="gallery-item gallery-item--large">
+          <div class="img-placeholder" style="aspect-ratio: 21/9; border-radius: 0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Panoramic Venue Photo Coming Soon</span>
           </div>
         </div>
 
-        <!-- Placeholder 4 -->
-        <div class="gallery-item">
-          <div class="img-placeholder">
-            <span class="placeholder-icon">🪕</span>
-            <span class="placeholder-label">Bluegrass Performance</span>
+        <!-- More placeholders -->
+        <div class="gallery-item gallery-item--standard">
+          <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: 0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Photo Coming Soon</span>
           </div>
         </div>
 
-        <!-- Placeholder 5 -->
-        <div class="gallery-item">
-          <div class="img-placeholder">
-            <span class="placeholder-icon">💡</span>
-            <span class="placeholder-label">Venue Interior & Lighting</span>
+        <div class="gallery-item gallery-item--standard">
+          <div class="img-placeholder" style="aspect-ratio: 4/3; border-radius: 0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            <span>Photo Coming Soon</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== VISIT US ==================== -->
-  <section class="visit section" id="visit">
+  <!-- ══════════════════════════════════════════════════════════
+       CTA BANNER
+       ══════════════════════════════════════════════════════════ -->
+  <section class="section section--surface" id="contact" style="text-align: center;">
     <div class="container">
-      <div style="text-align: center; margin-bottom: var(--space-xl);" class="reveal">
-        <span class="section-label">Plan Your Visit</span>
-        <h2 class="section-title section-title-center">Come See Us</h2>
-      </div>
-
-      <div class="visit-grid">
-        <div class="info-card reveal-left">
-          <div class="info-item">
-            <span class="info-icon">📍</span>
-            <div>
-              <p class="info-label">Address</p>
-              <p class="info-value">2396 Business 19 Hwy<br>Andrews, NC 28901</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-icon">📞</span>
-            <div>
-              <p class="info-label">Phone</p>
-              <p class="info-value"><a href="tel:+18283604647">(828) 360-4647</a></p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-icon">🕖</span>
-            <div>
-              <p class="info-label">Live Music Night</p>
-              <p class="info-value">Every Saturday<br>7:00 PM — 10:30 PM</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <span class="info-icon">🏔️</span>
-            <div>
-              <p class="info-label">Location</p>
-              <p class="info-value">Cherokee County, North Carolina</p>
-            </div>
-          </div>
-
-          <div style="margin-top: var(--space-md);">
-            <a href="tel:+18283604647" class="btn btn-accent">📞 Call Now</a>
-          </div>
-        </div>
-
-        <div class="map-container reveal-right">
-          <div class="map-placeholder">
-            <span class="placeholder-icon">🗺️</span>
-            <p style="font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase;">Google Maps Embed</p>
-            <p style="font-size: 0.8rem; opacity: 0.6;">2396 Business 19 Hwy, Andrews, NC</p>
-          </div>
-        </div>
-      </div>
+      <span class="section-label">Come See Us</span>
+      <h2>Ready for a Night of Music?</h2>
+      <p style="margin: var(--sp-md) auto var(--sp-xl); max-width: 50ch;">Get directions, check our hours, or ask about
+        venue rentals — we'd love to hear from you.</p>
+      <a href="contact/" class="btn btn--gold">Contact Us</a>
     </div>
   </section>
 
-  <!-- ==================== FOOTER ==================== -->
+  <div class="section-divider"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════════ -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="LuLu's live music and events logo.avif" alt="LuLu's Live Music & Events" width="180" height="60">
-          <p>Family-friendly live music & dance floor venue in Cherokee County, North Carolina. Come for the music, stay for the memories.</p>
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">
+          <img src="LuLu's live music and events logo.avif" alt="LuLu's logo">
+          <span class="footer__logo-text">LuLu's Live Music &amp; Events</span>
+        </a>
+
+        <div class="footer__links">
+          <a href="about/">About</a>
+          <a href="dance-nights/">Dance Nights</a>
+          <a href="venue-rental-andrews-nc/">Venue Rental</a>
+          <a href="contact/">Contact</a>
         </div>
 
-        <div class="footer-nav">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#live-music">Live Music</a></li>
-            <li><a href="#dance-floor">Dance Floor</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#visit">Visit Us</a></li>
-          </ul>
+        <p class="footer__phone">(828) 360-4647</p>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
         </div>
 
-        <div class="footer-nav">
-          <h4>Connect</h4>
-          <div class="footer-social">
-            <a href="#" class="social-link" aria-label="Facebook">📘</a>
-            <a href="#" class="social-link" aria-label="Instagram">📷</a>
-            <a href="#" class="social-link" aria-label="YouTube">🎬</a>
-          </div>
-          <div style="margin-top: var(--space-md);">
-            <p class="info-label">Call Us</p>
-            <p style="font-size: 1.1rem; margin-top: 0.25rem;"><a href="tel:+18283604647" style="color: var(--color-primary-light);">(828) 360-4647</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 LuLu's Live Music & Events. All rights reserved. | Andrews, NC 28901</p>
+        <p class="footer__copy">&copy; 2026 LuLu's Live Music &amp; Events. Andrews, NC. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== SCRIPTS ==================== -->
+  <!-- ══════════════════════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════════════════════ -->
   <script>
-    // --- Sticky header background on scroll ---
-    const header = document.getElementById('header');
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // --- Mobile hamburger menu ---
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      mobileNav.classList.toggle('open');
-      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    // Mobile menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
     });
 
-    // Close mobile nav when a link is clicked
+    // Close mobile menu when a link is tapped
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        mobileNav.classList.remove('open');
-        document.body.style.overflow = '';
+        mobileMenu.classList.remove('active');
       });
     });
 
-    // --- Scroll reveal with Intersection Observer ---
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    // ── Dynamic Calendar ──────────────────────────────────────
+    (function () {
+      const cal = document.getElementById('calendar');
+      if (!cal) return;
 
-    const revealObserver = new IntersectionObserver((entries) => {
+      const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+      const now = new Date();
+      let viewYear = now.getFullYear();
+      let viewMonth = now.getMonth();
+
+      function render() {
+        const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+        const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+        const isCurrentMonth = viewYear === now.getFullYear() && viewMonth === now.getMonth();
+
+        let html = `<div class="calendar-header">
+          <div class="month-nav"><button id="cal-prev" aria-label="Previous month">&#9664;</button></div>
+          <h3>${MONTHS[viewMonth]} ${viewYear}</h3>
+          <div class="month-nav"><button id="cal-next" aria-label="Next month">&#9654;</button></div>
+        </div>`;
+
+        html += `<table class="calendar-table"><thead><tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th class="th-sat">Sat</th>
+        </tr></thead><tbody><tr>`;
+
+        for (let i = 0; i < firstDay; i++) html += '<td class="empty"></td>';
+
+        for (let d = 1; d <= daysInMonth; d++) {
+          const dow = (firstDay + d - 1) % 7;
+          if (dow === 0 && d > 1) html += '</tr><tr>';
+
+          const isToday = isCurrentMonth && d === now.getDate();
+          const isSat = dow === 6;
+          const cls = isSat ? 'saturday-event' : (isToday ? 'today' : '');
+
+          html += `<td class="${cls}${isToday && isSat ? ' today' : ''}">`;
+          html += `<span class="day-number">${d}</span>`;
+          if (isSat) html += '<span class="event-tag">Live 7-10</span>';
+          html += '</td>';
+        }
+
+        const remaining = (7 - ((firstDay + daysInMonth) % 7)) % 7;
+        for (let i = 0; i < remaining; i++) html += '<td class="empty"></td>';
+
+        html += `</tr></tbody></table>`;
+        html += `<div class="calendar-legend">
+          <div class="calendar-legend__item"><span class="calendar-legend__dot calendar-legend__dot--event"></span>Live Music Night</div>
+          <div class="calendar-legend__item"><span class="calendar-legend__dot calendar-legend__dot--today"></span>Today</div>
+        </div>`;
+
+        cal.innerHTML = html;
+        document.getElementById('cal-prev').addEventListener('click', () => { viewMonth--; if (viewMonth < 0) { viewMonth = 11; viewYear--; } render(); });
+        document.getElementById('cal-next').addEventListener('click', () => { viewMonth++; if (viewMonth > 11) { viewMonth = 0; viewYear++; } render(); });
+      }
+
+      render();
+    })();
+
+    // Intersection Observer for fade-up animations
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
+          entry.target.classList.add('animate-fade-up');
+          observer.unobserve(entry.target);
         }
       });
-    }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
-    });
+    }, { threshold: 0.15 });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.card, .dance-feature').forEach(el => {
+      observer.observe(el);
+    });
   </script>
 
 </body>
+
 </html>
