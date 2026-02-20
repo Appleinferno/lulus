@@ -1330,7 +1330,7 @@ p {
 .footer__legal a {
   font-size: 0.8rem;
   color: var(--clr-text-muted);
-  opacity: 0.6;
+  opacity: 0.85;
   transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
@@ -1342,7 +1342,7 @@ p {
 .footer__copy {
   font-size: 0.8rem;
   color: var(--clr-text-muted);
-  opacity: 0.6;
+  opacity: 0.85;
 }
 
 /* ── Legal Pages (Terms / Privacy) ─────────────────────────── */
