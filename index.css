@@ -449,6 +449,11 @@ p {
   background: url("LuLu's Hero Image draft (1).avif") center/cover no-repeat;
 }
 
+/* Mobile hero image — hidden on desktop, shown on mobile */
+.hero__mobile-img {
+  display: none;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -1452,6 +1457,29 @@ p {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ── Responsive: Mobile Hero (below 768px) ─────────────────── */
+@media (max-width: 767px) {
+  .hero {
+    background-image: none;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero__mobile-img {
+    display: block;
+    width: 100%;
+    border-radius: var(--radius-lg);
+    margin-top: var(--sp-lg);
+    padding: 0 var(--sp-lg);
+    position: relative;
+    z-index: 1;
   }
 }
 
