@@ -1,0 +1,5 @@
+# robots.txt for LuLu's Live Music & Events
+User-agent: *
+Allow: /
+
+Sitemap: https://appleinferno.github.io/lulus/sitemap.xml
